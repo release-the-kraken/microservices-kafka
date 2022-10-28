@@ -6,13 +6,21 @@ topic:
 
 spring:
   kafka:
+    bootstrap-servers: kafka:29092
     consumer:
       group-id: "default"
 
   h2:
     console:
       enabled: true
+      settings:
+        web-allow-others: true
   datasource:
     url: jdbc:h2:mem:kafka-cloud-test
     username: sa
 
+management:
+  endpoint:
+    web:
+      exposure:
+        include: '*'

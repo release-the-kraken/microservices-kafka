@@ -3,3 +3,7 @@ server:
 
 topic:
   name: topic.food.order
+
+spring:
+  kafka:
+    bootstrap-servers: kafka:29092
